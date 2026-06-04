@@ -221,6 +221,10 @@
       overflow-y: auto;
       scrollbar-width: thin;
       scrollbar-color: var(--brock-grey-mid) transparent;
+      padding-top: 0;
+    }
+    .side-col .sidebar-card:first-child {
+      margin-top: 0;
     }
 
     /* ── SECTION TITLES ── */
@@ -1469,8 +1473,8 @@
   <aside class="side-col">
 
     <!-- Citation Stats -->
-    <div class="sidebar-card">
-      <div class="sidebar-card-header">Research Impact</div>
+    <div class="sidebar-card" style="border-top:none;">
+      <div class="sidebar-card-header" style="background:none;border-bottom:2px solid var(--brock-red);padding:.0rem 0 .6rem 0;margin:0 1rem;font-family:'Source Serif 4',Georgia,serif;font-size:1.35rem;font-weight:600;color:var(--brock-grey-dark);text-transform:none;letter-spacing:normal;">Research Impact</div>
       <div class="sidebar-card-body" style="padding:.8rem 1rem;">
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--brock-grey-mid);border:1px solid var(--brock-grey-mid);border-radius:3px;overflow:hidden;margin-bottom:.8rem;">
           <div style="background:var(--brock-white);padding:.6rem .8rem;text-align:center;">
