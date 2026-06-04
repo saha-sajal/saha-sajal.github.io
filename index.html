@@ -214,7 +214,14 @@
       margin-top: 2.5rem;
     }
     .main-col {}
-    .side-col {}
+    .side-col {
+      position: sticky;
+      top: 72px;
+      max-height: calc(100vh - 80px);
+      overflow-y: auto;
+      scrollbar-width: thin;
+      scrollbar-color: var(--brock-grey-mid) transparent;
+    }
 
     /* ── SECTION TITLES ── */
     .section-header {
@@ -675,7 +682,6 @@
     </a>
     <nav class="header-nav">
       <a href="#about">About</a>
-      <a href="#news">News</a>
       <a href="#research">Research</a>
       <a href="#teaching">Teaching</a>
       <a href="#publications">Publications</a>
