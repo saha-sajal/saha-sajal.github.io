@@ -560,6 +560,86 @@
       height: 5px;
     }
 
+    /* ── NEWS & UPDATES ── */
+    .news-year-block { margin-bottom: 1rem; }
+    .news-year-toggle {
+      width: 100%;
+      display: flex; align-items: center; justify-content: space-between;
+      background: var(--brock-grey);
+      border: 1px solid var(--brock-grey-mid);
+      border-left: 4px solid var(--brock-red);
+      border-radius: 0 3px 3px 0;
+      padding: .6rem 1rem;
+      cursor: pointer;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: .88rem;
+      font-weight: 700;
+      color: var(--brock-grey-dark);
+      text-align: left;
+      transition: background .15s;
+    }
+    .news-year-toggle:hover { background: var(--brock-grey-mid); }
+    .news-year-toggle .year-label { display: flex; align-items: center; gap: .6rem; }
+    .news-year-count, .news-year-toggle .year-count {
+      font-size: .72rem;
+      font-weight: 700;
+      background: var(--brock-red);
+      color: #fff;
+      border-radius: 10px;
+      padding: .1rem .5rem;
+    }
+    .news-year-toggle .chevron {
+      font-size: .75rem;
+      color: var(--brock-muted);
+      transition: transform .2s;
+    }
+    .news-year-toggle.open .chevron { transform: rotate(180deg); }
+    .news-year-body {
+      border: 1px solid var(--brock-grey-mid);
+      border-top: none;
+      border-radius: 0 0 3px 3px;
+      overflow: hidden;
+      display: none;
+    }
+    .news-year-body.open { display: block; }
+    .news-entry {
+      display: grid;
+      grid-template-columns: 90px 20px 1fr;
+      gap: .3rem .6rem;
+      padding: .75rem 1rem;
+      border-bottom: 1px solid var(--brock-grey);
+      align-items: baseline;
+      font-size: .85rem;
+    }
+    .news-entry:last-child { border-bottom: none; }
+    .news-date {
+      font-size: .75rem;
+      font-weight: 600;
+      color: var(--brock-muted);
+      white-space: nowrap;
+    }
+    .news-cat-icon { font-size: .9rem; text-align: center; }
+    .news-text { color: var(--brock-text); line-height: 1.5; }
+    .news-text a { color: var(--brock-red); }
+    .news-tag {
+      display: inline-block;
+      font-size: .68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      padding: .1rem .4rem;
+      border-radius: 2px;
+      margin-right: .3rem;
+      vertical-align: middle;
+    }
+    .tag-pub        { background: #deeeff; color: #0d4d8c; border: 1px solid #9ac4f0; }
+    .tag-award      { background: #fff3cd; color: #7d5a00; border: 1px solid #ffd966; }
+    .tag-grant      { background: #d4f5e0; color: #1a6635; border: 1px solid #7dd3a8; }
+    .tag-teaching   { background: #f3e5f5; color: #4a148c; border: 1px solid #ce93d8; }
+    .tag-service    { background: #fce8ec; color: #a50d26; border: 1px solid #f0b8c0; }
+    .tag-collab     { background: #e8f4fd; color: #0d4d8c; border: 1px solid #b8d9f5; }
+    .tag-news       { background: #f2f2f2; color: #3d3d3d; border: 1px solid #dedede; }
+
     /* ── TEACHING ── */
     .teaching-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; }
     .course-card { background: var(--brock-white); border: 1px solid var(--brock-grey-mid); border-top: 4px solid var(--brock-red); border-radius: 0 0 4px 4px; padding: 1.2rem 1.3rem; transition: box-shadow .15s; }
@@ -595,6 +675,7 @@
     </a>
     <nav class="header-nav">
       <a href="#about">About</a>
+      <a href="#news">News</a>
       <a href="#research">Research</a>
       <a href="#teaching">Teaching</a>
       <a href="#publications">Publications</a>
@@ -630,17 +711,11 @@
         <a class="badge badge-primary" href="mailto:sajal.saha@brocku.ca">
           <span class="badge-icon">✉</span> sajal.saha@brocku.ca
         </a>
-        <a class="badge" href="http://inform-lab.click/cv.pdf" target="_blank">
-          <span class="badge-icon">📄</span> Download CV
-        </a>
         <a class="badge" href="https://scholar.google.ca/citations?user=zqmdiOUAAAAJ&hl=en&authuser=1" target="_blank">
           <span class="badge-icon">🎓</span> Google Scholar
         </a>
         <a class="badge" href="https://www.linkedin.com/in/sajal-saha-bd/" target="_blank">
           <span class="badge-icon">🔗</span> LinkedIn
-        </a>
-        <a class="badge" href="http://inform-lab.click" target="_blank">
-          <span class="badge-icon">🌐</span> INFORM Lab
         </a>
       </div>
       <div class="keyword-list">
@@ -1376,7 +1451,7 @@
           </div>
           <div class="contact-row">
             <svg class="contact-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-            <a href="http://inform-lab.click" target="_blank">inform-lab.click</a>
+            <a href="https://brocku.ca/mathematics-science/computer-science/" target="_blank">brocku.ca/computer-science</a>
           </div>
         </div>
       </div>
@@ -1387,47 +1462,197 @@
   <!-- SIDEBAR -->
   <aside class="side-col">
 
-    <!-- Affiliation -->
+    <!-- Citation Stats -->
     <div class="sidebar-card">
-      <div class="sidebar-card-header">Affiliation</div>
-      <div class="sidebar-card-body">
-        <div class="sidebar-row">
-          <span class="sidebar-icon">🏛️</span>
-          <div><strong>Brock University</strong><br/><span style="font-size:.8rem;color:var(--brock-muted);">St. Catharines, ON, Canada</span></div>
+      <div class="sidebar-card-header">Research Impact</div>
+      <div class="sidebar-card-body" style="padding:.8rem 1rem;">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--brock-grey-mid);border:1px solid var(--brock-grey-mid);border-radius:3px;overflow:hidden;margin-bottom:.8rem;">
+          <div style="background:var(--brock-white);padding:.6rem .8rem;text-align:center;">
+            <div style="font-family:'Source Serif 4',Georgia,serif;font-size:1.4rem;font-weight:600;color:var(--brock-red);line-height:1;">761</div>
+            <div style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--brock-muted);">Citations</div>
+          </div>
+          <div style="background:var(--brock-white);padding:.6rem .8rem;text-align:center;">
+            <div style="font-family:'Source Serif 4',Georgia,serif;font-size:1.4rem;font-weight:600;color:var(--brock-red);line-height:1;">13</div>
+            <div style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--brock-muted);">h-index</div>
+          </div>
+          <div style="background:var(--brock-white);padding:.6rem .8rem;text-align:center;">
+            <div style="font-family:'Source Serif 4',Georgia,serif;font-size:1.4rem;font-weight:600;color:var(--brock-red);line-height:1;">15</div>
+            <div style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--brock-muted);">i10-index</div>
+          </div>
+          <div style="background:var(--brock-white);padding:.6rem .8rem;text-align:center;">
+            <div style="font-family:'Source Serif 4',Georgia,serif;font-size:1.4rem;font-weight:600;color:var(--brock-red);line-height:1;">47</div>
+            <div style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--brock-muted);">Papers</div>
+          </div>
         </div>
-        <div class="sidebar-row">
-          <span class="sidebar-icon">💻</span>
-          <div style="font-size:.83rem;">Department of Computer Science</div>
-        </div>
-        <div class="sidebar-row">
-          <span class="sidebar-icon">🔬</span>
-          <div style="font-size:.83rem;">Faculty of Mathematics &amp; Science</div>
-        </div>
-        <div class="sidebar-row">
-          <span class="sidebar-icon">🧪</span>
-          <div style="font-size:.83rem;">Founder, <a href="http://inform-lab.click" target="_blank">INFORM Lab</a></div>
-        </div>
+        <a href="https://scholar.google.ca/citations?user=zqmdiOUAAAAJ&hl=en" target="_blank" style="font-size:.75rem;color:var(--brock-muted);">📊 Google Scholar · Updated 2025</a>
       </div>
     </div>
 
-    <!-- Quick Links -->
+    <!-- News & Updates -->
     <div class="sidebar-card">
-      <div class="sidebar-card-header">Quick Links</div>
-      <div class="sidebar-card-body" style="padding:.6rem 1rem;">
-        <div style="display:flex;flex-direction:column;gap:.3rem;">
-          <a href="http://inform-lab.click/cv.pdf" target="_blank" style="font-size:.83rem;display:flex;align-items:center;gap:.5rem;padding:.4rem .2rem;border-bottom:1px solid var(--brock-grey);">
-            <span>📄</span> Download CV
-          </a>
-          <a href="https://scholar.google.ca/citations?user=zqmdiOUAAAAJ&hl=en&authuser=1" target="_blank" style="font-size:.83rem;display:flex;align-items:center;gap:.5rem;padding:.4rem .2rem;border-bottom:1px solid var(--brock-grey);">
-            <span>🎓</span> Google Scholar
-          </a>
-          <a href="https://www.linkedin.com/in/sajal-saha-bd/" target="_blank" style="font-size:.83rem;display:flex;align-items:center;gap:.5rem;padding:.4rem .2rem;border-bottom:1px solid var(--brock-grey);">
-            <span>🔗</span> LinkedIn Profile
-          </a>
-          <a href="http://inform-lab.click" target="_blank" style="font-size:.83rem;display:flex;align-items:center;gap:.5rem;padding:.4rem .2rem;">
-            <span>🌐</span> INFORM Lab Website
-          </a>
+      <div class="sidebar-card-header">News &amp; Updates</div>
+      <div class="sidebar-card-body" style="padding:0;">
+
+        <!-- 2026 open -->
+        <div class="news-year-block" style="margin-bottom:0;">
+          <button class="news-year-toggle open" onclick="toggleYear(this)" style="border-radius:0;border-left:none;border-right:none;border-top:none;">
+            <span class="year-label">2026 <span class="news-year-count">3</span></span>
+            <span class="chevron">▼</span>
+          </button>
+          <div class="news-year-body open" style="border:none;border-bottom:1px solid var(--brock-grey-mid);">
+            <div class="news-entry" style="grid-template-columns:80px 18px 1fr;font-size:.8rem;">
+              <span class="news-date">Jun 2026</span>
+              <span class="news-cat-icon" style="font-size:.8rem;">📄</span>
+              <span class="news-text"><span class="news-tag tag-pub">Publication</span> "A Hybrid Deep Learning Model for Adversarially Resilient Internet Traffic Prediction" published in <em>Computers and Electrical Engineering</em>.</span>
+            </div>
+            <div class="news-entry" style="grid-template-columns:80px 18px 1fr;font-size:.8rem;">
+              <span class="news-date">Jan 2026</span>
+              <span class="news-cat-icon" style="font-size:.8rem;">📄</span>
+              <span class="news-text"><span class="news-tag tag-pub">Publication</span> Two papers accepted at <em>IEEE CCNC 2026</em> on federated learning for intrusion detection and RAG-based DoS mitigation.</span>
+            </div>
+            <div class="news-entry" style="grid-template-columns:80px 18px 1fr;font-size:.8rem;">
+              <span class="news-date">Jan 2026</span>
+              <span class="news-cat-icon" style="font-size:.8rem;">🔬</span>
+              <span class="news-text"><span class="news-tag tag-news">Update</span> Joined the Department of Computer Science at <strong>Brock University</strong> as Assistant Professor.</span>
+            </div>
+          </div>
         </div>
+
+        <!-- 2025 open -->
+        <div class="news-year-block" style="margin-bottom:0;">
+          <button class="news-year-toggle open" onclick="toggleYear(this)" style="border-radius:0;border-left:none;border-right:none;border-top:none;">
+            <span class="year-label">2025 <span class="news-year-count">5</span></span>
+            <span class="chevron">▼</span>
+          </button>
+          <div class="news-year-body open" style="border:none;border-bottom:1px solid var(--brock-grey-mid);">
+            <div class="news-entry" style="grid-template-columns:80px 18px 1fr;font-size:.8rem;">
+              <span class="news-date">Nov 2025</span>
+              <span class="news-cat-icon" style="font-size:.8rem;">🎓</span>
+              <span class="news-text"><span class="news-tag tag-teaching">Teaching</span> Teaching <em>COSC 4P84 — Introduction to NLP</em> at Brock University.</span>
+            </div>
+            <div class="news-entry" style="grid-template-columns:80px 18px 1fr;font-size:.8rem;">
+              <span class="news-date">Jul 2025</span>
+              <span class="news-cat-icon" style="font-size:.8rem;">📄</span>
+              <span class="news-text"><span class="news-tag tag-pub">Publication</span> Paper published in <em>Computer Communications</em> (Elsevier, IF: 4.3, Q1) on LSTM traffic forecasting.</span>
+            </div>
+            <div class="news-entry" style="grid-template-columns:80px 18px 1fr;font-size:.8rem;">
+              <span class="news-date">Jun 2025</span>
+              <span class="news-cat-icon" style="font-size:.8rem;">📄</span>
+              <span class="news-text"><span class="news-tag tag-pub">Publication</span> Paper accepted at <em>IEEE IWCMC 2025</em> on autonomous cyber incident response.</span>
+            </div>
+            <div class="news-entry" style="grid-template-columns:80px 18px 1fr;font-size:.8rem;">
+              <span class="news-date">May 2025</span>
+              <span class="news-cat-icon" style="font-size:.8rem;">📄</span>
+              <span class="news-text"><span class="news-tag tag-pub">Publication</span> Paper accepted at <em>IEEE ICC Workshops 2025</em> on ML-based network failure prediction.</span>
+            </div>
+            <div class="news-entry" style="grid-template-columns:80px 18px 1fr;font-size:.8rem;">
+              <span class="news-date">Mar 2025</span>
+              <span class="news-cat-icon" style="font-size:.8rem;">📄</span>
+              <span class="news-text"><span class="news-tag tag-pub">Publication</span> Paper accepted at <em>IEEE SmartNet 2025</em> on resilient federated learning for DDoS detection.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2024 archived -->
+        <div class="news-year-block" style="margin-bottom:0;">
+          <button class="news-year-toggle" onclick="toggleYear(this)" style="border-radius:0;border-left:none;border-right:none;border-top:none;">
+            <span class="year-label">2024 <span class="news-year-count">5</span></span>
+            <span class="chevron">▼</span>
+          </button>
+          <div class="news-year-body" style="border:none;border-bottom:1px solid var(--brock-grey-mid);">
+            <div class="news-entry" style="grid-template-columns:80px 18px 1fr;font-size:.8rem;">
+              <span class="news-date">Dec 2024</span>
+              <span class="news-cat-icon" style="font-size:.8rem;">📄</span>
+              <span class="news-text"><span class="news-tag tag-pub">Publication</span> ENIDS paper published in <em>IEEE TNSM</em> (IF: 5.4, Q1, CiteScore: 10.5).</span>
+            </div>
+            <div class="news-entry" style="grid-template-columns:80px 18px 1fr;font-size:.8rem;">
+              <span class="news-date">Oct 2024</span>
+              <span class="news-cat-icon" style="font-size:.8rem;">📄</span>
+              <span class="news-text"><span class="news-tag tag-pub">Publication</span> Paper accepted at <em>IEEE WF-IoT 2024</em> on IoT security using explainable AI and LLMs.</span>
+            </div>
+            <div class="news-entry" style="grid-template-columns:80px 18px 1fr;font-size:.8rem;">
+              <span class="news-date">Sep 2024</span>
+              <span class="news-cat-icon" style="font-size:.8rem;">📄</span>
+              <span class="news-text"><span class="news-tag tag-pub">Publication</span> Cyber threat prediction paper published in <em>Computer Communications</em> (IF: 4.3, Q1).</span>
+            </div>
+            <div class="news-entry" style="grid-template-columns:80px 18px 1fr;font-size:.8rem;">
+              <span class="news-date">Jun 2024</span>
+              <span class="news-cat-icon" style="font-size:.8rem;">📄</span>
+              <span class="news-text"><span class="news-tag tag-pub">Publication</span> Paper accepted at <em>IEEE IWCMC 2024</em> on EMD-KNN deep learning for traffic prediction.</span>
+            </div>
+            <div class="news-entry" style="grid-template-columns:80px 18px 1fr;font-size:.8rem;">
+              <span class="news-date">Mar 2024</span>
+              <span class="news-cat-icon" style="font-size:.8rem;">📄</span>
+              <span class="news-text"><span class="news-tag tag-pub">Publication</span> Multi-step traffic forecasting paper published in <em>Sensors</em> (MDPI, IF: 3.5, Q2).</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2023 archived -->
+        <div class="news-year-block" style="margin-bottom:0;">
+          <button class="news-year-toggle" onclick="toggleYear(this)" style="border-radius:0;border-left:none;border-right:none;border-top:none;">
+            <span class="year-label">2023 <span class="news-year-count">5</span></span>
+            <span class="chevron">▼</span>
+          </button>
+          <div class="news-year-body" style="border:none;border-bottom:1px solid var(--brock-grey-mid);">
+            <div class="news-entry" style="grid-template-columns:80px 18px 1fr;font-size:.8rem;">
+              <span class="news-date">Dec 2023</span>
+              <span class="news-cat-icon" style="font-size:.8rem;">📄</span>
+              <span class="news-text"><span class="news-tag tag-pub">Publication</span> Outlier impact paper published in <em>IEEE TNSM</em> (IF: 5.4, Q1).</span>
+            </div>
+            <div class="news-entry" style="grid-template-columns:80px 18px 1fr;font-size:.8rem;">
+              <span class="news-date">Dec 2023</span>
+              <span class="news-cat-icon" style="font-size:.8rem;">📄</span>
+              <span class="news-text"><span class="news-tag tag-pub">Publication</span> Android malware classification paper published — 102 citations to date.</span>
+            </div>
+            <div class="news-entry" style="grid-template-columns:80px 18px 1fr;font-size:.8rem;">
+              <span class="news-date">May 2023</span>
+              <span class="news-cat-icon" style="font-size:.8rem;">📄</span>
+              <span class="news-text"><span class="news-tag tag-pub">Publication</span> Paper presented at <em>IEEE INFOCOM Workshops 2023</em> (CORE A*).</span>
+            </div>
+            <div class="news-entry" style="grid-template-columns:80px 18px 1fr;font-size:.8rem;">
+              <span class="news-date">Mar 2023</span>
+              <span class="news-cat-icon" style="font-size:.8rem;">📄</span>
+              <span class="news-text"><span class="news-tag tag-pub">Publication</span> Papers at <em>IEEE ICC 2023</em> and <em>IEEE CCNC 2023</em> (CORE B) on traffic prediction.</span>
+            </div>
+            <div class="news-entry" style="grid-template-columns:80px 18px 1fr;font-size:.8rem;">
+              <span class="news-date">Jan 2023</span>
+              <span class="news-cat-icon" style="font-size:.8rem;">🏆</span>
+              <span class="news-text"><span class="news-tag tag-award">Award</span> <strong>Distinguished Graduate Student Award</strong>, Goodman School of Business, Brock University.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2022 archived -->
+        <div class="news-year-block" style="margin-bottom:0;">
+          <button class="news-year-toggle" onclick="toggleYear(this)" style="border-radius:0;border-left:none;border-right:none;border-top:none;border-bottom:none;">
+            <span class="year-label">2022 <span class="news-year-count">4</span></span>
+            <span class="chevron">▼</span>
+          </button>
+          <div class="news-year-body" style="border:none;">
+            <div class="news-entry" style="grid-template-columns:80px 18px 1fr;font-size:.8rem;">
+              <span class="news-date">Nov 2022</span>
+              <span class="news-cat-icon" style="font-size:.8rem;">📄</span>
+              <span class="news-text"><span class="news-tag tag-pub">Publication</span> DDoS detection paper published in <em>Sensors</em> (MDPI, IF: 3.5, Q2).</span>
+            </div>
+            <div class="news-entry" style="grid-template-columns:80px 18px 1fr;font-size:.8rem;">
+              <span class="news-date">Jul 2022</span>
+              <span class="news-cat-icon" style="font-size:.8rem;">📄</span>
+              <span class="news-text"><span class="news-tag tag-pub">Publication</span> Three papers at <em>IEEE IWCMC 2022</em> and <em>IEEE ISNCC 2022</em>.</span>
+            </div>
+            <div class="news-entry" style="grid-template-columns:80px 18px 1fr;font-size:.8rem;">
+              <span class="news-date">May 2022</span>
+              <span class="news-cat-icon" style="font-size:.8rem;">📄</span>
+              <span class="news-text"><span class="news-tag tag-pub">Publication</span> Anomalous ISP traffic paper at <em>IEEE ICC 2022</em> (CORE B).</span>
+            </div>
+            <div class="news-entry" style="grid-template-columns:80px 18px 1fr;font-size:.8rem;">
+              <span class="news-date">Jan 2022</span>
+              <span class="news-cat-icon" style="font-size:.8rem;">📄</span>
+              <span class="news-text"><span class="news-tag tag-pub">Publication</span> DDoS feature selection paper at <em>IEEE CCNC 2022</em> (CORE B) — 38 citations to date.</span>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
 
@@ -1468,6 +1693,11 @@
     document.querySelectorAll('.pub-list').forEach(l => l.classList.remove('active'));
     document.getElementById(type).classList.add('active');
     e.target.classList.add('active');
+  }
+  function toggleYear(btn) {
+    btn.classList.toggle('open');
+    const body = btn.nextElementSibling;
+    body.classList.toggle('open');
   }
 </script>
 
