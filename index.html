@@ -497,6 +497,90 @@
       height: 5px;
     }
 
+    /* ── TEACHING ── */
+    .teaching-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1rem;
+    }
+    .course-card {
+      background: var(--brock-white);
+      border: 1px solid var(--brock-grey-mid);
+      border-top: 4px solid var(--brock-red);
+      border-radius: 0 0 4px 4px;
+      padding: 1.2rem 1.3rem;
+      transition: box-shadow .15s;
+    }
+    .course-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,.08); }
+    .course-code {
+      font-size: .72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: var(--brock-red);
+      margin-bottom: .2rem;
+    }
+    .course-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--brock-grey-dark);
+      margin-bottom: .4rem;
+      line-height: 1.3;
+    }
+    .course-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .4rem;
+      margin-bottom: .7rem;
+    }
+    .course-tag {
+      background: var(--brock-grey);
+      border: 1px solid var(--brock-grey-mid);
+      border-radius: 2px;
+      padding: .15rem .55rem;
+      font-size: .74rem;
+      font-weight: 600;
+      color: var(--brock-muted);
+    }
+    .course-desc {
+      font-size: .83rem;
+      color: var(--brock-muted);
+      line-height: 1.55;
+      margin-bottom: .9rem;
+    }
+    .course-topics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .3rem;
+      margin-bottom: .9rem;
+    }
+    .course-topic {
+      background: var(--brock-red-light);
+      color: var(--brock-red-dark);
+      border-radius: 2px;
+      padding: .1rem .45rem;
+      font-size: .72rem;
+      font-weight: 600;
+    }
+    .course-link {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      font-size: .8rem;
+      font-weight: 700;
+      color: var(--brock-red);
+      text-decoration: none;
+      border: 1px solid var(--brock-red);
+      border-radius: 3px;
+      padding: .3rem .75rem;
+      transition: background .15s, color .15s;
+    }
+    .course-link:hover {
+      background: var(--brock-red);
+      color: var(--brock-white);
+      text-decoration: none;
+    }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
       .profile-hero-inner { grid-template-columns: 1fr; }
@@ -523,6 +607,7 @@
     <nav class="header-nav">
       <a href="#about">About</a>
       <a href="#research">Research</a>
+      <a href="#teaching">Teaching</a>
       <a href="#publications">Publications</a>
       <a href="#awards">Awards</a>
       <a href="#prospective">Join Lab</a>
@@ -636,6 +721,41 @@
           <h3>AI for Wireless &amp; IoT Networks</h3>
           <p>Deep learning for spectrum sensing, anomaly forecasting, and secure communication in next-generation networks.</p>
         </div>
+      </div>
+    </section>
+
+    <!-- TEACHING -->
+    <section class="section-block" id="teaching">
+      <div class="section-header">
+        <h2>Teaching</h2>
+      </div>
+      <div class="teaching-grid">
+
+        <!-- COSC 4P84 -->
+        <div class="course-card">
+          <div class="course-code">COSC 4P84</div>
+          <div class="course-title">Introduction to Natural Language Processing</div>
+          <div class="course-meta">
+            <span class="course-tag">📅 Fall 2024</span>
+            <span class="course-tag">4th Year</span>
+            <span class="course-tag">0.5 Credits</span>
+          </div>
+          <div class="course-desc">
+            A theoretical and methodological introduction to computational modelling of natural language,
+            covering algorithms, formalisms, and applications including language modelling, parsing,
+            machine translation, and ML techniques for NLP.
+          </div>
+        </div>
+
+        <!-- Placeholder for future courses -->
+        <div class="course-card" style="border-top-color:var(--brock-grey-mid);opacity:.55;">
+          <div class="course-code" style="color:var(--brock-muted);">Coming Soon</div>
+          <div class="course-title" style="color:var(--brock-muted);">More courses will be added</div>
+          <div class="course-desc" style="margin-top:.5rem;">
+            Additional courses for Winter 2025 and future terms will appear here.
+          </div>
+        </div>
+
       </div>
     </section>
 
