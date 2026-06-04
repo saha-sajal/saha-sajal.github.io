@@ -272,6 +272,69 @@
       line-height: 1.55;
     }
 
+    /* ── SCHOLAR METRICS BAR ── */
+    .scholar-bar {
+      display: flex; gap: 1px;
+      background: var(--brock-grey-mid);
+      border: 1px solid var(--brock-grey-mid);
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+    }
+    .scholar-stat {
+      flex: 1;
+      background: var(--brock-white);
+      padding: .8rem 1rem;
+      text-align: center;
+    }
+    .scholar-stat-val {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: var(--brock-red);
+      display: block;
+      line-height: 1;
+      margin-bottom: .2rem;
+    }
+    .scholar-stat-label {
+      font-size: .72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .07em;
+      color: var(--brock-muted);
+    }
+    .scholar-source {
+      font-size: .75rem;
+      color: var(--brock-muted);
+      margin-bottom: 1.4rem;
+      display: flex; align-items: center; gap: .4rem;
+    }
+    .scholar-source a { color: var(--brock-red); }
+
+    /* ── JOURNAL METRICS BADGES ── */
+    .pub-metrics {
+      display: flex; flex-wrap: wrap; gap: .3rem;
+      margin-top: .35rem;
+    }
+    .metric-badge {
+      display: inline-flex; align-items: center; gap: .25rem;
+      font-size: .7rem;
+      font-weight: 700;
+      padding: .15rem .5rem;
+      border-radius: 2px;
+      letter-spacing: .02em;
+      white-space: nowrap;
+    }
+    .metric-if   { background: #e8f4fd; color: #0d4d8c; border: 1px solid #b8d9f5; }
+    .metric-cs   { background: #e8f5e9; color: #1b5e20; border: 1px solid #a5d6a7; }
+    .metric-q1   { background: #c8102e; color: #fff; border: 1px solid #a50d26; }
+    .metric-q2   { background: #e65100; color: #fff; border: 1px solid #bf360c; }
+    .metric-core-astar { background: #4a148c; color: #fff; border: 1px solid #38006b; }
+    .metric-core-a { background: #1565c0; color: #fff; border: 1px solid #0d47a1; }
+    .metric-core-b { background: #2e7d32; color: #fff; border: 1px solid #1b5e20; }
+    .metric-cite { background: #fff8e1; color: #e65100; border: 1px solid #ffcc80; }
+    .metric-ieee { background: #f3e5f5; color: #4a148c; border: 1px solid #ce93d8; }
+
     /* ── PUBLICATIONS ── */
     .pub-tabs {
       display: flex;
@@ -498,88 +561,14 @@
     }
 
     /* ── TEACHING ── */
-    .teaching-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 1rem;
-    }
-    .course-card {
-      background: var(--brock-white);
-      border: 1px solid var(--brock-grey-mid);
-      border-top: 4px solid var(--brock-red);
-      border-radius: 0 0 4px 4px;
-      padding: 1.2rem 1.3rem;
-      transition: box-shadow .15s;
-    }
+    .teaching-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; }
+    .course-card { background: var(--brock-white); border: 1px solid var(--brock-grey-mid); border-top: 4px solid var(--brock-red); border-radius: 0 0 4px 4px; padding: 1.2rem 1.3rem; transition: box-shadow .15s; }
     .course-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,.08); }
-    .course-code {
-      font-size: .72rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: .1em;
-      color: var(--brock-red);
-      margin-bottom: .2rem;
-    }
-    .course-title {
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--brock-grey-dark);
-      margin-bottom: .4rem;
-      line-height: 1.3;
-    }
-    .course-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: .4rem;
-      margin-bottom: .7rem;
-    }
-    .course-tag {
-      background: var(--brock-grey);
-      border: 1px solid var(--brock-grey-mid);
-      border-radius: 2px;
-      padding: .15rem .55rem;
-      font-size: .74rem;
-      font-weight: 600;
-      color: var(--brock-muted);
-    }
-    .course-desc {
-      font-size: .83rem;
-      color: var(--brock-muted);
-      line-height: 1.55;
-      margin-bottom: .9rem;
-    }
-    .course-topics {
-      display: flex;
-      flex-wrap: wrap;
-      gap: .3rem;
-      margin-bottom: .9rem;
-    }
-    .course-topic {
-      background: var(--brock-red-light);
-      color: var(--brock-red-dark);
-      border-radius: 2px;
-      padding: .1rem .45rem;
-      font-size: .72rem;
-      font-weight: 600;
-    }
-    .course-link {
-      display: inline-flex;
-      align-items: center;
-      gap: .4rem;
-      font-size: .8rem;
-      font-weight: 700;
-      color: var(--brock-red);
-      text-decoration: none;
-      border: 1px solid var(--brock-red);
-      border-radius: 3px;
-      padding: .3rem .75rem;
-      transition: background .15s, color .15s;
-    }
-    .course-link:hover {
-      background: var(--brock-red);
-      color: var(--brock-white);
-      text-decoration: none;
-    }
+    .course-code { font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: var(--brock-red); margin-bottom: .2rem; }
+    .course-title { font-size: 1rem; font-weight: 700; color: var(--brock-grey-dark); margin-bottom: .4rem; line-height: 1.3; }
+    .course-meta { display: flex; flex-wrap: wrap; gap: .4rem; margin-bottom: .7rem; }
+    .course-tag { background: var(--brock-grey); border: 1px solid var(--brock-grey-mid); border-radius: 2px; padding: .15rem .55rem; font-size: .74rem; font-weight: 600; color: var(--brock-muted); }
+    .course-desc { font-size: .83rem; color: var(--brock-muted); line-height: 1.55; }
 
     /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
@@ -707,55 +696,28 @@
       <div class="research-grid">
         <div class="research-card">
           <h3>Internet Traffic Forecasting</h3>
-          <p>Forecasting models for network traffic classification, anomaly detection, and predictive maintenance using ML and LLMs.</p>
+          <p>ML and LLM-based forecasting models for network traffic classification, anomaly detection, and proactive network management. Includes transfer learning and wavelet-based approaches for small ISP networks.</p>
         </div>
         <div class="research-card">
           <h3>Cyber-Attack Detection &amp; Mitigation</h3>
-          <p>AI-driven real-time cyber-threat prediction, blockchain-based security frameworks, and explainable AI for decision-making.</p>
+          <p>AI-driven real-time cyber-threat prediction including DDoS detection, RAG-based incident response, and explainable AI for transparent security decision-making.</p>
         </div>
         <div class="research-card">
           <h3>Federated Learning &amp; Privacy</h3>
-          <p>Privacy-preserving anomaly detection using federated learning and differential privacy in distributed network environments.</p>
+          <p>Privacy-preserving anomaly detection using federated learning, differential privacy, and blockchain-based aggregation for resilient distributed security systems.</p>
         </div>
         <div class="research-card">
           <h3>AI for Wireless &amp; IoT Networks</h3>
-          <p>Deep learning for spectrum sensing, anomaly forecasting, and secure communication in next-generation networks.</p>
+          <p>Deep learning for spectrum sensing, anomaly forecasting, and end-to-end IoT security frameworks leveraging LLMs in next-generation 6G networks.</p>
         </div>
-      </div>
-    </section>
-
-    <!-- TEACHING -->
-    <section class="section-block" id="teaching">
-      <div class="section-header">
-        <h2>Teaching</h2>
-      </div>
-      <div class="teaching-grid">
-
-        <!-- COSC 4P84 -->
-        <div class="course-card">
-          <div class="course-code">COSC 4P84</div>
-          <div class="course-title">Introduction to Natural Language Processing</div>
-          <div class="course-meta">
-            <span class="course-tag">📅 Fall 2024</span>
-            <span class="course-tag">4th Year</span>
-            <span class="course-tag">0.5 Credits</span>
-          </div>
-          <div class="course-desc">
-            A theoretical and methodological introduction to computational modelling of natural language,
-            covering algorithms, formalisms, and applications including language modelling, parsing,
-            machine translation, and ML techniques for NLP.
-          </div>
+        <div class="research-card">
+          <h3>Large Language Models for Security</h3>
+          <p>Fine-tuning and deploying domain-specific LLMs for cyberattack mitigation, network intrusion response, and privacy-preserving cross-silo applications.</p>
         </div>
-
-        <!-- Placeholder for future courses -->
-        <div class="course-card" style="border-top-color:var(--brock-grey-mid);opacity:.55;">
-          <div class="course-code" style="color:var(--brock-muted);">Coming Soon</div>
-          <div class="course-title" style="color:var(--brock-muted);">More courses will be added</div>
-          <div class="course-desc" style="margin-top:.5rem;">
-            Additional courses for Winter 2025 and future terms will appear here.
-          </div>
+        <div class="research-card">
+          <h3>Network Intrusion Detection</h3>
+          <p>Ensemble deep learning frameworks (ENIDS), adversarially resilient ML models, and explainable AI for robust network intrusion detection in mobile and IoT environments.</p>
         </div>
-
       </div>
     </section>
 
@@ -764,6 +726,32 @@
       <div class="section-header">
         <h2>Publications</h2>
       </div>
+
+      <!-- Scholar metrics bar -->
+      <div class="scholar-bar">
+        <div class="scholar-stat">
+          <span class="scholar-stat-val">761</span>
+          <span class="scholar-stat-label">Citations</span>
+        </div>
+        <div class="scholar-stat">
+          <span class="scholar-stat-val">13</span>
+          <span class="scholar-stat-label">h-index</span>
+        </div>
+        <div class="scholar-stat">
+          <span class="scholar-stat-val">15</span>
+          <span class="scholar-stat-label">i10-index</span>
+        </div>
+        <div class="scholar-stat">
+          <span class="scholar-stat-val">47</span>
+          <span class="scholar-stat-label">Total Papers</span>
+        </div>
+      </div>
+      <div class="scholar-source">
+        <span>📊</span> Metrics from
+        <a href="https://scholar.google.ca/citations?user=zqmdiOUAAAAJ&hl=en" target="_blank">Google Scholar</a>
+        · Updated 2025
+      </div>
+
       <div class="pub-tabs">
         <button class="pub-tab active" onclick="switchTab(event,'journals')">Journal Articles</button>
         <button class="pub-tab" onclick="switchTab(event,'conferences')">Conference Papers</button>
@@ -773,119 +761,151 @@
       <div class="pub-list active" id="journals">
 
         <div class="pub-item">
-          <div class="pub-num">13</div>
+          <div class="pub-num">J14</div>
           <div class="pub-body">
-            <div class="pub-title">Overcoming Data Scarcity Challenges: Predicting Internet Traffic in Small ISP Networks with Transfer Learning and Data Augmentation<span class="pub-tag tag-submitted">Submitted</span></div>
-            <div class="pub-authors">Sajal Saha, Anwar Haque</div>
-            <div class="pub-venue">Elsevier Computer Communication, 2025 <a class="pub-link" href="https://arxiv.org/html/2409.13181" target="_blank">[PDF]</a></div>
+            <div class="pub-title">A Hybrid Deep Learning Model for Adversarially Resilient Internet Traffic Prediction<span class="pub-tag tag-published">2026</span></div>
+            <div class="pub-authors">S. Saha, S. Das, G.H.S. Carvalho</div>
+            <div class="pub-venue">Computers and Electrical Engineering, Vol. 130, 2026 <a class="pub-link" href="https://scholar.google.ca/citations?user=zqmdiOUAAAAJ" target="_blank">[Scholar ↗]</a></div>
+            <div class="pub-metrics">
+              <span class="metric-badge metric-ieee">Elsevier</span>
+              <span class="metric-badge metric-cite">Cited: 1</span>
+            </div>
           </div>
         </div>
 
         <div class="pub-item">
-          <div class="pub-num">12</div>
+          <div class="pub-num">J13</div>
           <div class="pub-body">
-            <div class="pub-title">Intelligent Routing Algorithm over SDN: Reusable Reinforcement Learning Approach<span class="pub-tag tag-submitted">Submitted</span></div>
-            <div class="pub-authors">Wumian Wang, Sajal Saha, Anwar Haque, Greg Sidebottom</div>
-            <div class="pub-venue">Elsevier Computer Network, 2025 <a class="pub-link" href="https://arxiv.org/abs/2409.15226" target="_blank">[PDF]</a></div>
+            <div class="pub-title">Overcoming Data Limitations in Internet Traffic Forecasting: LSTM Models with Transfer Learning and Wavelet Augmentation<span class="pub-tag tag-published">2025</span></div>
+            <div class="pub-authors">S. Saha, A. Haque, G. Sidebottom</div>
+            <div class="pub-venue">Computer Communications, Vol. 242, 2025 <a class="pub-link" href="https://arxiv.org/html/2409.13181" target="_blank">[PDF]</a></div>
+            <div class="pub-metrics">
+              <span class="metric-badge metric-if">IF: 4.3</span>
+              <span class="metric-badge metric-q1">Q1</span>
+              <span class="metric-badge metric-ieee">Elsevier · SCIE</span>
+              <span class="metric-badge metric-cite">Cited: 4</span>
+            </div>
           </div>
         </div>
 
         <div class="pub-item">
-          <div class="pub-num">11</div>
+          <div class="pub-num">J12</div>
           <div class="pub-body">
-            <div class="pub-title">Adversarially Robust Internet Traffic Prediction with ConvLSTMTransNet<span class="pub-tag tag-submitted">Submitted</span></div>
-            <div class="pub-authors">Sajal Saha, Saikat Das, Glaucio H.S. Carvalho</div>
-            <div class="pub-venue">Elsevier Journal of IoT, 2025</div>
-          </div>
-        </div>
-
-        <div class="pub-item">
-          <div class="pub-num">10</div>
-          <div class="pub-body">
-            <div class="pub-title">Domain-Specific Fine-Tuning of Open Source LLMs for Cyberattack Mitigation<span class="pub-tag tag-submitted">Submitted</span></div>
-            <div class="pub-authors">Sudipto Baral, Sajal Saha, Anwar Haque</div>
-            <div class="pub-venue">IEEE TNSM, 2025</div>
-          </div>
-        </div>
-
-        <div class="pub-item">
-          <div class="pub-num">9</div>
-          <div class="pub-body">
-            <div class="pub-title">PRAG: A Privacy Preserving Agent Architecture for Securing Sensitive Data in Cross Silo LLM Applications<span class="pub-tag tag-submitted">Submitted</span></div>
-            <div class="pub-authors">Anik Islam, Sajal Saha, Hadis Karimpouri</div>
-            <div class="pub-venue">ICML, 2025</div>
-          </div>
-        </div>
-
-        <div class="pub-item">
-          <div class="pub-num">8</div>
-          <div class="pub-body">
-            <div class="pub-title">Predicting and mitigating cyber threats through data mining and machine learning<span class="pub-tag tag-published">Published</span></div>
-            <div class="pub-authors">Samia Nusrat, Sajal Saha, Anwar Haque</div>
+            <div class="pub-title">Predicting and Mitigating Cyber Threats through Data Mining and Machine Learning<span class="pub-tag tag-published">2024</span></div>
+            <div class="pub-authors">N. Samia, S. Saha, A. Haque</div>
             <div class="pub-venue">Computer Communications, Vol. 228, 2024 <a class="pub-link" href="https://www.sciencedirect.com/science/article/pii/S0140366424002962" target="_blank">[PDF]</a></div>
+            <div class="pub-metrics">
+              <span class="metric-badge metric-if">IF: 4.3</span>
+              <span class="metric-badge metric-q1">Q1</span>
+              <span class="metric-badge metric-ieee">Elsevier · SCIE</span>
+              <span class="metric-badge metric-cite">Cited: 24</span>
+            </div>
           </div>
         </div>
 
         <div class="pub-item">
-          <div class="pub-num">7</div>
+          <div class="pub-num">J11</div>
           <div class="pub-body">
-            <div class="pub-title">ENIDS: A Deep Learning-Based Ensemble Framework for Network Intrusion Detection Systems<span class="pub-tag tag-published">Published</span></div>
-            <div class="pub-authors">Ibrahim Mohammed Sayem, Moinul Islam Sayed, Sajal Saha, Anwar Haque</div>
-            <div class="pub-venue">IEEE Transactions on Network and Service Management, 2024 <a class="pub-link" href="https://ieeexplore-ieee-org.prxy.lib.unbc.ca/document/10557716" target="_blank">[PDF]</a></div>
+            <div class="pub-title">ENIDS: A Deep Learning-Based Ensemble Framework for Network Intrusion Detection Systems<span class="pub-tag tag-published">2024</span></div>
+            <div class="pub-authors">I.M. Sayem, M.I. Sayed, S. Saha, A. Haque</div>
+            <div class="pub-venue">IEEE Transactions on Network and Service Management, Vol. 21(5), 2024 <a class="pub-link" href="https://ieeexplore.ieee.org/document/10557716" target="_blank">[PDF]</a></div>
+            <div class="pub-metrics">
+              <span class="metric-badge metric-if">IF: 5.4</span>
+              <span class="metric-badge metric-cs">CiteScore: 10.5</span>
+              <span class="metric-badge metric-q1">Q1</span>
+              <span class="metric-badge metric-ieee">IEEE · SCIE</span>
+              <span class="metric-badge metric-cite">Cited: 37</span>
+            </div>
           </div>
         </div>
 
         <div class="pub-item">
-          <div class="pub-num">6</div>
+          <div class="pub-num">J10</div>
           <div class="pub-body">
-            <div class="pub-title">Multi-Step Internet Traffic Forecasting Models with Variable Forecast Horizons for Proactive Network Management<span class="pub-tag tag-published">Published</span></div>
-            <div class="pub-authors">Saha S., Haque A., Sidebottom G.</div>
-            <div class="pub-venue">Sensors, 2024, 24, 1871 <a class="pub-link" href="https://doi.org/10.3390/s24061871" target="_blank">[DOI]</a></div>
+            <div class="pub-title">Multi-Step Internet Traffic Forecasting Models with Variable Forecast Horizons for Proactive Network Management<span class="pub-tag tag-published">2024</span></div>
+            <div class="pub-authors">S. Saha, A. Haque, G. Sidebottom</div>
+            <div class="pub-venue">Sensors, 24(6), 1871, 2024 <a class="pub-link" href="https://doi.org/10.3390/s24061871" target="_blank">[DOI]</a></div>
+            <div class="pub-metrics">
+              <span class="metric-badge metric-if">IF: 3.5</span>
+              <span class="metric-badge metric-q2">Q2</span>
+              <span class="metric-badge metric-ieee">MDPI · SCIE</span>
+              <span class="metric-badge metric-cite">Cited: 10</span>
+            </div>
           </div>
         </div>
 
         <div class="pub-item">
-          <div class="pub-num">5</div>
+          <div class="pub-num">J9</div>
           <div class="pub-body">
-            <div class="pub-title">Analyzing the Impact of Outlier Data Points on Multi-Step Internet Traffic Prediction using Deep Sequence Models<span class="pub-tag tag-published">Published</span></div>
-            <div class="pub-authors">Sajal Saha, Anwar Haque, Greg Sidebottom</div>
-            <div class="pub-venue">IEEE Transactions on Network and Service Management, 2023 <a class="pub-link" href="https://ieeexplore.ieee.org/document/10082966/" target="_blank">[PDF]</a></div>
+            <div class="pub-title">Analyzing the Impact of Outlier Data Points on Multi-Step Internet Traffic Prediction using Deep Sequence Models<span class="pub-tag tag-published">2023</span></div>
+            <div class="pub-authors">S. Saha, A. Haque, G. Sidebottom</div>
+            <div class="pub-venue">IEEE Transactions on Network and Service Management, Vol. 20(2), pp. 1345–1362, 2023 <a class="pub-link" href="https://ieeexplore.ieee.org/document/10082966/" target="_blank">[PDF]</a></div>
+            <div class="pub-metrics">
+              <span class="metric-badge metric-if">IF: 5.4</span>
+              <span class="metric-badge metric-cs">CiteScore: 10.5</span>
+              <span class="metric-badge metric-q1">Q1</span>
+              <span class="metric-badge metric-ieee">IEEE · SCIE</span>
+              <span class="metric-badge metric-cite">Cited: 25</span>
+            </div>
           </div>
         </div>
 
         <div class="pub-item">
-          <div class="pub-num">4</div>
+          <div class="pub-num">J8</div>
           <div class="pub-body">
-            <div class="pub-title">L-fuzzy concept analysis using fuzzy categories<span class="pub-tag tag-published">Published</span></div>
-            <div class="pub-authors">George Addison, Anahita Izadpanahi, Sajal Saha, Michael Winter</div>
-            <div class="pub-venue">Elsevier Fuzzy Sets and Systems, Vol. 460, 2023, pp. 72–102 <a class="pub-link" href="https://www.sciencedirect.com/science/article/abs/pii/S0165011422004675" target="_blank">[PDF]</a></div>
+            <div class="pub-title">Android Malware Classification using Optimum Feature Selection and Ensemble Machine Learning<span class="pub-tag tag-published">2023</span></div>
+            <div class="pub-authors">R. Islam, M.I. Sayed, S. Saha, M.J. Hossain, M.A. Masud</div>
+            <div class="pub-venue">Internet of Things and Cyber-Physical Systems, Vol. 3, pp. 100–111, 2023 <a class="pub-link" href="https://www.sciencedirect.com/science/article/pii/S2667345223000202" target="_blank">[PDF]</a></div>
+            <div class="pub-metrics">
+              <span class="metric-badge metric-ieee">Elsevier · KeAi</span>
+              <span class="metric-badge metric-cite">Cited: 102</span>
+            </div>
           </div>
         </div>
 
         <div class="pub-item">
-          <div class="pub-num">3</div>
+          <div class="pub-num">J7</div>
           <div class="pub-body">
-            <div class="pub-title">Android malware classification using optimum feature selection and ensemble machine learning<span class="pub-tag tag-published">Published</span></div>
-            <div class="pub-authors">Rejwana Islam, Moinul Islam Sayed, Sajal Saha, Mohammad Jamal Hossain, Md Abdul Masud</div>
-            <div class="pub-venue">Internet of Things and Cyber-Physical Systems, 2023 <a class="pub-link" href="https://www.sciencedirect.com/science/article/pii/S2667345223000202" target="_blank">[PDF]</a></div>
+            <div class="pub-title">L-fuzzy Concept Analysis using Fuzzy Categories<span class="pub-tag tag-published">2023</span></div>
+            <div class="pub-authors">G. Addison, A. Izadpanahi, S. Saha, M. Winter</div>
+            <div class="pub-venue">Fuzzy Sets and Systems, Vol. 460, pp. 72–102, 2023 <a class="pub-link" href="https://www.sciencedirect.com/science/article/abs/pii/S0165011422004675" target="_blank">[PDF]</a></div>
+            <div class="pub-metrics">
+              <span class="metric-badge metric-if">IF: 3.9</span>
+              <span class="metric-badge metric-q1">Q1</span>
+              <span class="metric-badge metric-ieee">Elsevier · SCIE</span>
+              <span class="metric-badge metric-cite">Cited: 4</span>
+            </div>
           </div>
         </div>
 
         <div class="pub-item">
-          <div class="pub-num">2</div>
+          <div class="pub-num">J6</div>
           <div class="pub-body">
-            <div class="pub-title">Towards an Optimized Ensemble Feature Selection for DDoS Detection Using Both Supervised and Unsupervised Method<span class="pub-tag tag-published">Published</span></div>
-            <div class="pub-authors">Sajal Saha, Annita Tahsin Priyoti, Aakriti Sharma, Anwar Haque</div>
-            <div class="pub-venue">Sensors, Vol. 22, No. 23, 2022, pp. 9144 <a class="pub-link" href="https://www.mdpi.com/1424-8220/22/23/9144" target="_blank">[PDF]</a></div>
+            <div class="pub-title">Towards an Optimized Ensemble Feature Selection for DDoS Detection using Both Supervised and Unsupervised Method<span class="pub-tag tag-published">2022</span></div>
+            <div class="pub-authors">S. Saha, A.T. Priyoti, A. Sharma, A. Haque</div>
+            <div class="pub-venue">Sensors, Vol. 22(23), 9144, 2022 <a class="pub-link" href="https://www.mdpi.com/1424-8220/22/23/9144" target="_blank">[PDF]</a></div>
+            <div class="pub-metrics">
+              <span class="metric-badge metric-if">IF: 3.5</span>
+              <span class="metric-badge metric-q2">Q2</span>
+              <span class="metric-badge metric-ieee">MDPI · SCIE</span>
+              <span class="metric-badge metric-cite">Cited: 27</span>
+            </div>
           </div>
         </div>
 
         <div class="pub-item">
-          <div class="pub-num">1</div>
+          <div class="pub-num">J5</div>
           <div class="pub-body">
-            <div class="pub-title">Network intrusion detection and comparative analysis using ensemble machine learning and feature selection<span class="pub-tag tag-published">Published</span></div>
-            <div class="pub-authors">Saikat Das, Sajal Saha, Annita Tahsin Priyoti, Etee Kawna Roy, et al.</div>
-            <div class="pub-venue">IEEE Transactions on Network and Service Management, 2021</div>
+            <div class="pub-title">Network Intrusion Detection and Comparative Analysis using Ensemble Machine Learning and Feature Selection<span class="pub-tag tag-published">2021</span></div>
+            <div class="pub-authors">S. Das, S. Saha, A.T. Priyoti, E.K. Roy, F.T. Sheldon, A. Haque, S. Shiva</div>
+            <div class="pub-venue">IEEE Transactions on Network and Service Management, Vol. 19(4), pp. 4821–4833, 2021</div>
+            <div class="pub-metrics">
+              <span class="metric-badge metric-if">IF: 5.4</span>
+              <span class="metric-badge metric-cs">CiteScore: 10.5</span>
+              <span class="metric-badge metric-q1">Q1</span>
+              <span class="metric-badge metric-ieee">IEEE · SCIE</span>
+              <span class="metric-badge metric-cite">Cited: 137</span>
+            </div>
           </div>
         </div>
 
@@ -895,150 +915,323 @@
       <div class="pub-list" id="conferences">
 
         <div class="pub-item">
-          <div class="pub-num">22</div>
+          <div class="pub-num">C25</div>
           <div class="pub-body">
-            <div class="pub-title">Modeling and Prediction of Network Failures: A Machine Learning Approach<span class="pub-tag tag-submitted">Submitted</span></div>
-            <div class="pub-authors">Chandrika Saha, Sajal Saha, Anwar Haque</div>
-            <div class="pub-venue">IEEE ICC, 2025</div>
+            <div class="pub-title">Weighted Reciprocal Rank Fusion RAG for Context-Aware DoS Attack Mitigation<span class="pub-tag tag-published">2026</span></div>
+            <div class="pub-authors">A. Kafi, S. Saha, N. Shahriar</div>
+            <div class="pub-venue">IEEE CCNC, 2026</div>
+            <div class="pub-metrics">
+              <span class="metric-badge metric-core-b">CORE: B</span>
+              <span class="metric-badge metric-ieee">IEEE ComSoc</span>
+              <span class="metric-badge metric-cite">Cited: 1</span>
+            </div>
           </div>
         </div>
 
         <div class="pub-item">
-          <div class="pub-num">21</div>
+          <div class="pub-num">C24</div>
           <div class="pub-body">
-            <div class="pub-title">Autonomous Cyber Incident Response Using Reasoning and Action<span class="pub-tag tag-submitted">Submitted</span></div>
-            <div class="pub-authors">Sudipto Baral, Sajal Saha, Anwar Haque</div>
+            <div class="pub-title">RAID: A Reputation-Based Aggregation for Intrusion Detection in Federated Learning<span class="pub-tag tag-published">2026</span></div>
+            <div class="pub-authors">N. Parvizi, S. Saha, N. Shahriar</div>
+            <div class="pub-venue">IEEE CCNC, 2026</div>
+            <div class="pub-metrics">
+              <span class="metric-badge metric-core-b">CORE: B</span>
+              <span class="metric-badge metric-ieee">IEEE ComSoc</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-num">C23</div>
+          <div class="pub-body">
+            <div class="pub-title">Modeling and Prediction of Network Failures: A Machine Learning Approach<span class="pub-tag tag-published">2025</span></div>
+            <div class="pub-authors">C. Saha, S. Saha, A. Haque</div>
+            <div class="pub-venue">IEEE ICC Workshops, 2025</div>
+            <div class="pub-metrics">
+              <span class="metric-badge metric-core-b">CORE: B</span>
+              <span class="metric-badge metric-ieee">IEEE ComSoc</span>
+              <span class="metric-badge metric-cite">Cited: 1</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-num">C22</div>
+          <div class="pub-body">
+            <div class="pub-title">Autonomous Cyber Incident Response Using Reasoning and Action<span class="pub-tag tag-published">2025</span></div>
+            <div class="pub-authors">S. Baral, S. Saha, A. Haque</div>
             <div class="pub-venue">IEEE IWCMC, 2025</div>
+            <div class="pub-metrics">
+              <span class="metric-badge metric-ieee">IEEE ComSoc</span>
+              <span class="metric-badge metric-cite">Cited: 2</span>
+            </div>
           </div>
         </div>
 
         <div class="pub-item">
-          <div class="pub-num">20</div>
+          <div class="pub-num">C21</div>
           <div class="pub-body">
-            <div class="pub-title">Resilient Federated Learning for DDoS Detection with Multi-Krum Aggregation and Anomaly Detection<span class="pub-tag tag-submitted">Submitted</span></div>
-            <div class="pub-authors">Sajal Saha, Moinul Islam, Md Motiur Rahman, Miad Faezipour, Smrity Bhatt</div>
+            <div class="pub-title">Resilient Federated Learning for DDoS Detection with Multi-Krum Aggregation and Anomaly Detection<span class="pub-tag tag-published">2025</span></div>
+            <div class="pub-authors">S. Saha, M. Sayed, M.M. Rahman, M. Faezipour, S. Bhatt</div>
             <div class="pub-venue">IEEE SmartNet, 2025</div>
+            <div class="pub-metrics">
+              <span class="metric-badge metric-ieee">IEEE</span>
+              <span class="metric-badge metric-cite">Cited: 3</span>
+            </div>
           </div>
         </div>
 
         <div class="pub-item">
-          <div class="pub-num">19</div>
+          <div class="pub-num">C20</div>
           <div class="pub-body">
-            <div class="pub-title">ConvLSTMTransNet: A Hybrid Deep Learning Approach for Internet Traffic Telemetry<span class="pub-tag tag-accepted">Accepted</span></div>
-            <div class="pub-authors">Sajal Saha, Saikat Das, Glaucio H.S. Carvalho</div>
+            <div class="pub-title">ConvLSTMTransNet: A Hybrid Deep Learning Approach for Internet Traffic Telemetry<span class="pub-tag tag-published">2024</span></div>
+            <div class="pub-authors">S. Saha, S. Das, G.H.S. Carvalho</div>
             <div class="pub-venue">IEEE VCC, 2024</div>
+            <div class="pub-metrics">
+              <span class="metric-badge metric-ieee">IEEE</span>
+              <span class="metric-badge metric-cite">Cited: 6</span>
+            </div>
           </div>
         </div>
 
         <div class="pub-item">
-          <div class="pub-num">18</div>
+          <div class="pub-num">C19</div>
           <div class="pub-body">
-            <div class="pub-title">An Adaptive End-To-End IoT Security Framework Using Explainable AI and LLMs<span class="pub-tag tag-accepted">Accepted</span></div>
-            <div class="pub-authors">Sajal Saha, Sudipto Baral, Anwar Haque</div>
+            <div class="pub-title">An Adaptive End-To-End IoT Security Framework Using Explainable AI and LLMs<span class="pub-tag tag-published">2024</span></div>
+            <div class="pub-authors">S. Saha, S. Baral, A. Haque</div>
             <div class="pub-venue">IEEE WF-IoT, 2024</div>
+            <div class="pub-metrics">
+              <span class="metric-badge metric-ieee">IEEE ComSoc</span>
+              <span class="metric-badge metric-cite">Cited: 29</span>
+            </div>
           </div>
         </div>
 
         <div class="pub-item">
-          <div class="pub-num">17</div>
+          <div class="pub-num">C18</div>
           <div class="pub-body">
-            <div class="pub-title">Advancing Network Resilience Through Data Mining and Machine Learning in Cybersecurity<span class="pub-tag tag-published">Published</span></div>
-            <div class="pub-authors">Samia Nusrat, Sajal Saha, Anwar Haque</div>
-            <div class="pub-venue">IEEE DRCN, 2024</div>
-          </div>
-        </div>
-
-        <div class="pub-item">
-          <div class="pub-num">16</div>
-          <div class="pub-body">
-            <div class="pub-title">Optimizing Internet Traffic Predictions with a Novel Deep Learning EMD-KNN Framework<span class="pub-tag tag-published">Published</span></div>
-            <div class="pub-authors">Sajal Saha, Sudipto Baral, Anwar Haque</div>
+            <div class="pub-title">Optimizing Internet Traffic Predictions with a Novel Deep Learning EMD-KNN Framework<span class="pub-tag tag-published">2024</span></div>
+            <div class="pub-authors">S. Saha, S. Baral, A. Haque</div>
             <div class="pub-venue">IEEE IWCMC, 2024</div>
+            <div class="pub-metrics">
+              <span class="metric-badge metric-ieee">IEEE ComSoc</span>
+              <span class="metric-badge metric-cite">Cited: 3</span>
+            </div>
           </div>
         </div>
 
         <div class="pub-item">
-          <div class="pub-num">15</div>
+          <div class="pub-num">C17</div>
           <div class="pub-body">
-            <div class="pub-title">Examining Generative Adversarial Network for Smart Home DDoS Traffic Generation<span class="pub-tag tag-published">Published</span></div>
-            <div class="pub-authors">R. I. Nekvi, S. Saha, Y. A. Mtawa, A. Haque</div>
+            <div class="pub-title">Advancing Network Resilience Through Data Mining and Machine Learning in Cybersecurity<span class="pub-tag tag-published">2024</span></div>
+            <div class="pub-authors">N. Samia, S. Saha, A. Haque</div>
+            <div class="pub-venue">IEEE DRCN, 2024</div>
+            <div class="pub-metrics">
+              <span class="metric-badge metric-ieee">IEEE</span>
+              <span class="metric-badge metric-cite">Cited: 5</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-num">C16</div>
+          <div class="pub-body">
+            <div class="pub-title">Examining Generative Adversarial Network for Smart Home DDoS Traffic Generation<span class="pub-tag tag-published">2023</span></div>
+            <div class="pub-authors">R.I. Nekvi, S. Saha, Y. Al Mtawa, A. Haque</div>
             <div class="pub-venue">IEEE ISNCC, 2023</div>
+            <div class="pub-metrics">
+              <span class="metric-badge metric-ieee">IEEE</span>
+              <span class="metric-badge metric-cite">Cited: 5</span>
+            </div>
           </div>
         </div>
 
         <div class="pub-item">
-          <div class="pub-num">14</div>
+          <div class="pub-num">C15</div>
           <div class="pub-body">
-            <div class="pub-title">Empirical Mode Decomposition and Stationary Wavelet Transformation in Internet Traffic Prediction<span class="pub-tag tag-published">Published</span></div>
-            <div class="pub-authors">Sajal Saha, Moinul Islam Sayed, Anwar Haque</div>
-            <div class="pub-venue">IEEE INFOCOM WKSHPS, 2023</div>
+            <div class="pub-title">Empirical Mode Decomposition and Stationary Wavelet Transformation in Internet Traffic Prediction<span class="pub-tag tag-published">2023</span></div>
+            <div class="pub-authors">S. Saha, M.I. Sayed, A. Haque</div>
+            <div class="pub-venue">IEEE INFOCOM Workshops, 2023</div>
+            <div class="pub-metrics">
+              <span class="metric-badge metric-core-astar">CORE: A*</span>
+              <span class="metric-badge metric-ieee">IEEE · Top Networking Venue</span>
+              <span class="metric-badge metric-cite">Cited: 3</span>
+            </div>
           </div>
         </div>
 
         <div class="pub-item">
-          <div class="pub-num">13</div>
+          <div class="pub-num">C14</div>
           <div class="pub-body">
-            <div class="pub-title">Wavelet-Based Hybrid Machine Learning Model for Out-of-distribution Internet Traffic Prediction<span class="pub-tag tag-published">Published</span></div>
+            <div class="pub-title">Wavelet-Based Hybrid Machine Learning Model for Out-of-distribution Internet Traffic Prediction<span class="pub-tag tag-published">2023</span></div>
             <div class="pub-authors">S. Saha, A. Haque</div>
-            <div class="pub-venue">IEEE NOMS, 2023</div>
+            <div class="pub-venue">IEEE/IFIP NOMS, 2023</div>
+            <div class="pub-metrics">
+              <span class="metric-badge metric-ieee">IEEE · IFIP</span>
+              <span class="metric-badge metric-cite">Cited: 3</span>
+            </div>
           </div>
         </div>
 
         <div class="pub-item">
-          <div class="pub-num">11</div>
+          <div class="pub-num">C13</div>
           <div class="pub-body">
-            <div class="pub-title">Transfer learning based efficient traffic prediction with limited training data<span class="pub-tag tag-published">Published</span></div>
-            <div class="pub-authors">Sajal Saha, Anwar Haque, Greg Sidebottom</div>
+            <div class="pub-title">Out-of-Distribution Internet Traffic Prediction Generalization using Deep Sequence Model<span class="pub-tag tag-published">2023</span></div>
+            <div class="pub-authors">S. Saha, A. Haque</div>
+            <div class="pub-venue">IEEE ICC, 2023</div>
+            <div class="pub-metrics">
+              <span class="metric-badge metric-core-b">CORE: B</span>
+              <span class="metric-badge metric-ieee">IEEE ComSoc · Flagship</span>
+              <span class="metric-badge metric-cite">Cited: 3</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-num">C12</div>
+          <div class="pub-body">
+            <div class="pub-title">Transfer Learning Based Efficient Traffic Prediction with Limited Training Data<span class="pub-tag tag-published">2023</span></div>
+            <div class="pub-authors">S. Saha, A. Haque, G. Sidebottom</div>
             <div class="pub-venue">IEEE CCNC, 2023</div>
+            <div class="pub-metrics">
+              <span class="metric-badge metric-core-b">CORE: B</span>
+              <span class="metric-badge metric-ieee">IEEE ComSoc</span>
+              <span class="metric-badge metric-cite">Cited: 10</span>
+            </div>
           </div>
         </div>
 
         <div class="pub-item">
-          <div class="pub-num">7</div>
+          <div class="pub-num">C11</div>
           <div class="pub-body">
-            <div class="pub-title">Towards an Ensemble Regressor Model for ISP Traffic Prediction with Anomaly Detection and Mitigation<span class="pub-tag tag-published">Published</span></div>
-            <div class="pub-authors">Sajal Saha, Anwar Haque, Greg Sidebottom</div>
+            <div class="pub-title">Deep Learning Based Malapps Detection in Android Powered Mobile Cyber-Physical System<span class="pub-tag tag-published">2023</span></div>
+            <div class="pub-authors">M.I. Sayed, S. Saha, A. Haque</div>
+            <div class="pub-venue">IEEE ICNC, 2023</div>
+            <div class="pub-metrics">
+              <span class="metric-badge metric-ieee">IEEE</span>
+              <span class="metric-badge metric-cite">Cited: 6</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-num">C10</div>
+          <div class="pub-body">
+            <div class="pub-title">A Multi-Classifier for DDoS Attacks using Stacking Ensemble Deep Neural Network<span class="pub-tag tag-published">2022</span></div>
+            <div class="pub-authors">M.I. Sayed, I.M. Sayem, S. Saha, A. Haque</div>
+            <div class="pub-venue">IEEE IWCMC, 2022</div>
+            <div class="pub-metrics">
+              <span class="metric-badge metric-ieee">IEEE ComSoc</span>
+              <span class="metric-badge metric-cite">Cited: 28</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-num">C9</div>
+          <div class="pub-body">
+            <div class="pub-title">An Empirical Study on Internet Traffic Prediction using Statistical Rolling Model<span class="pub-tag tag-published">2022</span></div>
+            <div class="pub-authors">S. Saha, A. Haque, G. Sidebottom</div>
+            <div class="pub-venue">IEEE IWCMC, 2022</div>
+            <div class="pub-metrics">
+              <span class="metric-badge metric-ieee">IEEE ComSoc</span>
+              <span class="metric-badge metric-cite">Cited: 17</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-num">C8</div>
+          <div class="pub-body">
+            <div class="pub-title">Towards an Ensemble Regressor Model for ISP Traffic Prediction with Anomaly Detection and Mitigation<span class="pub-tag tag-published">2022</span></div>
+            <div class="pub-authors">S. Saha, A. Haque, G. Sidebottom</div>
             <div class="pub-venue">IEEE ISNCC, 2022</div>
+            <div class="pub-metrics">
+              <span class="metric-badge metric-ieee">IEEE</span>
+              <span class="metric-badge metric-cite">Cited: 8</span>
+            </div>
           </div>
         </div>
 
         <div class="pub-item">
-          <div class="pub-num">4</div>
+          <div class="pub-num">C7</div>
           <div class="pub-body">
-            <div class="pub-title">Deep sequence modeling for anomalous ISP traffic prediction<span class="pub-tag tag-published">Published</span></div>
-            <div class="pub-authors">Sajal Saha, Anwar Haque, Greg Sidebottom</div>
+            <div class="pub-title">Deep Sequence Modeling for Anomalous ISP Traffic Prediction<span class="pub-tag tag-published">2022</span></div>
+            <div class="pub-authors">S. Saha, A. Haque, G. Sidebottom</div>
             <div class="pub-venue">IEEE ICC, 2022</div>
+            <div class="pub-metrics">
+              <span class="metric-badge metric-core-b">CORE: B</span>
+              <span class="metric-badge metric-ieee">IEEE ComSoc · Flagship</span>
+              <span class="metric-badge metric-cite">Cited: 19</span>
+            </div>
           </div>
         </div>
 
         <div class="pub-item">
-          <div class="pub-num">3</div>
+          <div class="pub-num">C6</div>
           <div class="pub-body">
-            <div class="pub-title">Towards an Optimal Feature Selection Method for AI-Based DDoS Detection System<span class="pub-tag tag-published">Published</span></div>
-            <div class="pub-authors">Sajal Saha, Annita Tahsin Priyoti, Aakriti Sharma, Anwar Haque</div>
+            <div class="pub-title">Towards an Optimal Feature Selection Method for AI-Based DDoS Detection System<span class="pub-tag tag-published">2022</span></div>
+            <div class="pub-authors">S. Saha, A.T. Priyoti, A. Sharma, A. Haque</div>
             <div class="pub-venue">IEEE CCNC, 2022</div>
+            <div class="pub-metrics">
+              <span class="metric-badge metric-core-b">CORE: B</span>
+              <span class="metric-badge metric-ieee">IEEE ComSoc</span>
+              <span class="metric-badge metric-cite">Cited: 38</span>
+            </div>
           </div>
         </div>
 
         <div class="pub-item">
-          <div class="pub-num">2</div>
+          <div class="pub-num">C5</div>
           <div class="pub-body">
-            <div class="pub-title">Which Programming Language and Platform Developers Prefer for the Development? A Study Using Stack Overflow<span class="pub-tag tag-published">Published</span></div>
-            <div class="pub-authors">Sajal Saha, Golam Md Muradul Bashir, et al.</div>
+            <div class="pub-title">Which Programming Language and Platform Developers Prefer for the Development? A Study Using Stack Overflow<span class="pub-tag tag-published">2018</span></div>
+            <div class="pub-authors">S. Saha, G.M.M. Bashir, M.R. Talukder, J. Karmaker, M.S. Islam</div>
             <div class="pub-venue">ICISET 2018, IEEE</div>
+            <div class="pub-metrics">
+              <span class="metric-badge metric-ieee">IEEE</span>
+              <span class="metric-badge metric-cite">Cited: 4</span>
+            </div>
           </div>
         </div>
 
         <div class="pub-item">
-          <div class="pub-num">1</div>
+          <div class="pub-num">C4</div>
           <div class="pub-body">
-            <div class="pub-title">IoT based automated fish farm aquaculture monitoring system<span class="pub-tag tag-published">Published</span></div>
-            <div class="pub-authors">Sajal Saha, Rakibul Hasan Rajib, Sumaiya Kabir</div>
+            <div class="pub-title">IoT Based Automated Fish Farm Aquaculture Monitoring System<span class="pub-tag tag-published">2018</span></div>
+            <div class="pub-authors">S. Saha, R.H. Rajib, S. Kabir</div>
             <div class="pub-venue">ICISET 2018, IEEE</div>
+            <div class="pub-metrics">
+              <span class="metric-badge metric-ieee">IEEE</span>
+              <span class="metric-badge metric-cite">Cited: 148</span>
+            </div>
           </div>
         </div>
 
       </div><!-- /conferences -->
+    </section>
+
+    <!-- TEACHING -->
+    <section class="section-block" id="teaching">
+      <div class="section-header">
+        <h2>Teaching</h2>
+      </div>
+      <div class="teaching-grid">
+        <div class="course-card">
+          <div class="course-code">COSC 4P84</div>
+          <div class="course-title">Introduction to Natural Language Processing</div>
+          <div class="course-meta">
+            <span class="course-tag">📅 Fall 2024</span>
+            <span class="course-tag">4th Year</span>
+            <span class="course-tag">0.5 Credits</span>
+          </div>
+          <div class="course-desc">A theoretical and methodological introduction to computational modelling of natural language, covering language modelling, parsing, machine translation, transformers, LLMs, and ML techniques for NLP.</div>
+        </div>
+        <div class="course-card" style="border-top-color:var(--brock-grey-mid);opacity:.55;">
+          <div class="course-code" style="color:var(--brock-muted);">Coming Soon</div>
+          <div class="course-title" style="color:var(--brock-muted);">More courses will be added</div>
+          <div class="course-desc" style="margin-top:.5rem;">Additional courses for Winter 2025 and future terms will appear here.</div>
+        </div>
+      </div>
     </section>
 
     <!-- AWARDS -->
